@@ -7777,7 +7777,14 @@ var $author$project$First_Test$updateTests = A2(
 			$elm_explorations$test$Test$test,
 			'can add a new task',
 			function (_v1) {
-				var model = $author$project$Model$initModel;
+				var model = _Utils_update(
+					$author$project$Model$initModel,
+					{
+						tasks: _List_fromArray(
+							[
+								{completed: false, name: 'New Task'}
+							])
+					});
 				var updatedModel = A2($author$project$Update$update, $author$project$Update$AddTask, model);
 				return A2(
 					$elm_explorations$test$Expect$equal,
@@ -7822,7 +7829,7 @@ var $author$project$Test$Generated$Main$main = A2(
 		processes: 4,
 		report: $author$project$Test$Reporter$Reporter$ConsoleReport($author$project$Console$Text$UseColor),
 		runs: 100,
-		seed: 355906675894960
+		seed: 350560991980698
 	},
 	_List_fromArray(
 		[
@@ -7837,7 +7844,7 @@ var $author$project$Test$Generated$Main$main = A2(
 _Platform_export({'Test':{'Generated':{'Main':{'init':$author$project$Test$Generated$Main$main($elm$json$Json$Decode$int)(0)}}}});}(this));
 return this.Elm;
 })({});
-var pipeFilename = "/tmp/elm_test-1333.sock";
+var pipeFilename = "/tmp/elm_test-1825.sock";
 var net = require('net'),
   client = net.createConnection(pipeFilename);
 

@@ -33,7 +33,7 @@ updateTests =
         ,test "can add a new task" <|
             \() ->
                 let
-                    model = Model.initModel
+                    model = { initModel | tasks = [ { name = "New Task", completed = False } ] }
                     updatedModel = update AddTask model
                 in
                 Expect.equal updatedModel.tasks [{ name = "New Task", completed = False }]
